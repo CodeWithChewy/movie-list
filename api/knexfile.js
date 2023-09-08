@@ -4,17 +4,21 @@
  * @type { Object.<string, import("knex").Knex.Config> }
  */
 module.exports = {
-
   development: {
-    client: 'pg',
-    connection: {
-      // host: '127.0.0.1',
-      password: 'docker',
-      user: 'postgres',
-      port: 5432,
-      database: 'movies'
-    }
+    client: "pg",
+    connection: "postgres://postgres:docker@localhost/movies",
   },
+
+  // development: {
+  //   client: 'pg',
+  //   connection: {
+  //     // host: '127.0.0.1',
+  //     password: 'docker',
+  //     user: 'postgres',
+  //     port: 5432,
+  //     database: 'movies'
+  //   }
+
 
   staging: {
     client: 'postgresql',
