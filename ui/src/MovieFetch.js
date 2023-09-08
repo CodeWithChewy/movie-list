@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const MovieList = () => {
     const [movieList, setMovieList] = useState([]);
@@ -16,7 +16,14 @@ const MovieList = () => {
 
     return (
         <div>
-            {/* Render your movieList data here */}
+            <h2>Movie List</h2>
+            <ul>
+                {movieList.map(movie => (
+                    <li key={movie.id}>
+                        <h3>{movie.title}</h3>
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 }
